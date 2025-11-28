@@ -102,3 +102,4 @@ var/
 venv.bak/
 venv/
 wheels/
+src/synchromcp/_version.py
