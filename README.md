@@ -5,10 +5,10 @@ Synchronize MCP (Model Context Protocol) server configurations across AI apps an
 ## Problem
 
 AI coding assistants store MCP server configs in different locations:
-- Claude Desktop: `~/Library/Application Support/Claude/claude_desktop_config.json`
-- Cursor: `~/.cursor/mcp.json`
-- VSCode extensions: scattered across `globalStorage` directories
-- Codex CLI: `~/.codex/config.toml` (different format!)
+* Claude Desktop: `~/Library/Application Support/Claude/claude_desktop_config.json`
+* Cursor: `~/.cursor/mcp.json`
+* VSCode extensions: scattered across `globalStorage` directories
+* Codex CLI: `~/.codex/config.toml` (different format!)
 
 Keeping these in sync manually is tedious and error-prone.
 
@@ -46,6 +46,7 @@ synchromcp list
 ```
 
 Output:
+
 ```
 Found 8 MCP config files:
   [source] ~/Library/Application Support/Claude/claude_desktop_config.json
@@ -62,6 +63,7 @@ synchromcp show
 ```
 
 Output:
+
 ```json
 {
   "filesystem": {
