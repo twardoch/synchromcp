@@ -16,3 +16,6 @@ All notable changes to this project will be documented in this file.
 - Comprehensive test suite with 32 tests
 - GitHub Actions CI/CD workflows
 - Type hints and mypy strict mode
+- Zensical-based documentation build from `src_docs` to `docs`
+- `build.sh` script that builds the Python package and docs
+- CI and release workflows updated to run the docs build

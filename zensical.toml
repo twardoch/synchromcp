@@ -1,0 +1,5 @@
+[project]
+site_name = "synchromcp"
+docs_dir = "src_docs"
+site_dir = "docs"
+

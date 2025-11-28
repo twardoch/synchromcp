@@ -25,8 +25,14 @@ jobs:
       - name: Set up Python
         run: uv python install 3.12
 
+      - name: Install dependencies (including dev and docs)
+        run: uv sync --all-extras
+
       - name: Build package
         run: uv build
+
+      - name: Build docs
+        run: uv run zensical build --clean
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4

@@ -75,6 +75,7 @@
 - [x] Write README.md with usage examples
 - [x] Write CHANGELOG.md
 - [x] Update CLAUDE.md with project-specific notes
+- [x] Add basic Zensical docs build from `src_docs` to `docs`
 - [x] Add docstrings to all public functions
 - [x] Add type hints to all functions
 

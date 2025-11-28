@@ -43,6 +43,10 @@ jobs:
       - name: Run tests
         run: uv run pytest --cov=src --cov-report=xml
 
+      - name: Build docs
+        if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.12'
+        run: uv run zensical build --clean
+
       - name: Upload coverage
         if: matrix.os == 'ubuntu-latest' && matrix.python-version == '3.12'
         uses: codecov/codecov-action@v4

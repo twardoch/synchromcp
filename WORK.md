@@ -65,3 +65,32 @@ Valid config with 7 server(s)
 - Created: `src/synchromcp/` (7 Python files)
 - Created: `tests/` (5 test files)
 - Created: `.github/workflows/` (2 workflow files)
+
+## 2025-11-28: Zensical docs and build script
+
+### Summary
+
+Added Zensical-based documentation building from `src_docs` to `docs`, wired into a new `build.sh` script and GitHub Actions.
+
+### Tasks Completed
+
+- Added `zensical` as a development dependency in `pyproject.toml`.
+- Created `zensical.toml` with `docs_dir = "src_docs"` and `site_dir = "docs"`.
+- Added a minimal placeholder document at `src_docs/index.md`.
+- Introduced `build.sh` to run `uv sync --all-extras`, `uv build`, and `uv run zensical build --clean`.
+- Updated CI and release GitHub Actions to run the Zensical docs build.
+- Added `tests/test_docs_config.py` to assert the Zensical config uses `src_docs` → `docs`.
+
+### Test Results
+
+```
+uv run pytest
+============================== 41 passed in 0.33s ==============================
+```
+
+### Docs Build
+
+```
+uv run zensical build --clean
+Build finished in ~0.44s, output in docs/
+```
